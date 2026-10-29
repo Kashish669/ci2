@@ -1,0 +1,73 @@
+@model Participant
+
+<h2>Technical Fest Registration</h2>
+
+<form asp-action="Register" method="post">
+
+    <label>Name</label>
+    <input asp-for="ParticipantName"
+           class="form-control" />
+
+    <span asp-validation-for="ParticipantName"
+          class="text-danger"></span>
+
+    <br />
+
+    <label>Email</label>
+    <input asp-for="Email"
+           class="form-control" />
+
+    <span asp-validation-for="Email"
+          class="text-danger"></span>
+
+    <br />
+
+    <label>Department</label>
+    <input asp-for="Department"
+           class="form-control" />
+
+    <span asp-validation-for="Department"
+          class="text-danger"></span>
+
+    <br />
+
+    <label>Year</label>
+
+    <select asp-for="Year" class="form-control">
+        <option value="">Select Year</option>
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+    </select>
+
+    <br />
+
+    <label>Event</label>
+
+    <select asp-for="EventName" class="form-control">
+        <option value="">Select Event</option>
+        <option>Quiz</option>
+        <option>Coding</option>
+        <option>Hackathon</option>
+    </select>
+
+    <br />
+
+    <input asp-for="IsTeamEvent" />
+
+    <label>Team Event</label>
+
+    <br /><br />
+
+    <button type="submit"
+            class="btn btn-success">
+        Register
+    </button>
+
+    <a asp-action="Index"
+       class="btn btn-secondary">
+        Back
+    </a>
+
+</form>
